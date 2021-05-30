@@ -41,10 +41,12 @@ class BlocklyComponent extends React.Component {
         const { children } = this.props;
 
         return <React.Fragment>
+            <div className="h-screen overflow-hidden flex flex-row  ">
             <div ref={this.blocklyDiv} id="blocklyDiv" />
             <xml xmlns="https://developers.google.com/blockly/xml" is="blockly" style={{ display: 'none' }} ref={this.toolbox}>
                 {children}
             </xml>
+            </div>
         </React.Fragment>;
     }
 }

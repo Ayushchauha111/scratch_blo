@@ -232,7 +232,7 @@ export default function CatSprite(props) {
   // })
       // i++;
       return  {     
-                   transform:`translate3d(${x}px,${y}px,${z}px)`
+                   transform:"translate3d(10px,20px,40px)"
               }
             }
               

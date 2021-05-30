@@ -7,6 +7,8 @@ import Old from './component/side'
 import Sprite from './component/CatSprite'
 import './blocks/customblocks';
 import './generator/generator';
+import PreviewArea from './com/PreviewArea'
+import CatSprite from './component/CatSprite';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,13 +26,18 @@ class App extends React.Component {
   render() {
     console.log(this.generateCode)
     return (
-      <div >
-        <div>
-          <Sprite />
-          <button onClick={this.generateCode}>Convert</button>
-          </div>
-          <div>
-          <BlocklyComponent ref={this.simpleWorkspace}
+      // <div >
+      //   <div>
+      //     <Sprite />
+      //     </div>
+      //     <div>
+      //    
+      //     </div>
+      // </div>
+      <div className="bg-blue-100 pt-6 font-sans">
+      <div className="h-screen overflow-hidden flex flex-row  ">
+        <div className="flex-1 h-screen overflow-hidden flex flex-row bg-white border-t border-r border-gray-200 rounded-tr-xl mr-2">
+        <BlocklyComponent onClick={this.generateCode} ref={this.simpleWorkspace}
           readOnly={false} trashcan={true} media={'media/'}
           move={{
             scrollbars: true,
@@ -69,8 +76,12 @@ class App extends React.Component {
             <Block type="controls_repeat_ext">
             </Block>
           </BlocklyComponent>
-          </div>
+        </div>
+          <div >
+          <CatSprite />
+        </div>
       </div>
+    </div>
     );
   }
 }

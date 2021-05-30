@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.2",
     "blockly": "^3.20200924.4",
     "gh-pages": "^3.2.0",
     "goog": "^0.2.1",
@@ -23,7 +24,7 @@
     "audit": "npm audit fix",
     "update": "npm update",
     "postinstall": "cp -r node_modules/blockly/media public/media",
-    "start": "react-scripts start",
+    "start": "craco start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -52,6 +53,9 @@
     ]
   },
   "devDependencies": {
-    "expose-loader": "^3.0.0"
+    "autoprefixer": "^9.8.6",
+    "expose-loader": "^3.0.0",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   }
 }
