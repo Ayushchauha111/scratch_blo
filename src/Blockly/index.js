@@ -5,6 +5,7 @@ export default BlocklyComponent;
 
 const Block = (p) => {
     const { children, ...props } = p;
+    console.log(children)
     props.is = "blockly";
     return React.createElement("block", props, children);
 };
