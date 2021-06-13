@@ -49,7 +49,7 @@ class App extends React.Component {
       // </div>
       <div className="bg-blue-100 pt-6 font-sans">
         <div>
-          <button onClick={this.generateCode}>hey</button>
+          <button onClick={this.generateCode}>GENERATOR</button>
         </div>
       <div className="h-screen overflow-hidden flex flex-row  ">
   
